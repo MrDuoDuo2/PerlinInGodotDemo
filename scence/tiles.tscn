@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bejv6nf6fnnmt"]
+
+[ext_resource type="ArrayMesh" uid="uid://dghjwkhw2a1ll" path="res://kenney_platformer-kit/Models/OBJ format/block-grass-large-tall.obj" id="1_baxb1"]
+[ext_resource type="ArrayMesh" uid="uid://cs3vpwhx4vk11" path="res://kenney_platformer-kit/Models/OBJ format/flowers-tall.obj" id="2_wbv7v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tgioe"]
+size = Vector3(1.98071, 2, 2.00586)
+
+[node name="Tiles" type="Node3D"]
+
+[node name="Grass" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_baxb1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00817871, 1.00867, 0.00878906)
+shape = SubResource("BoxShape3D_tgioe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.295964, 0, 0)
+mesh = ExtResource("2_wbv7v")

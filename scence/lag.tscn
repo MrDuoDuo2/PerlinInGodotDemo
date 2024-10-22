@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://di5ldgpknnt3w"]
+
+[ext_resource type="ArrayMesh" uid="uid://b6wvavr0w8s62" path="res://model/lag.obj" id="1_ma4gr"]
+
+[node name="lag" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ma4gr")
